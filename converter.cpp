@@ -5,7 +5,9 @@
 #include "converter.h"
 #include <stdexcept>
 
-double getRate(const std::string &currency)
+using namespace std;
+
+double getRate(const string &currency)
 {
     if (currency == "UAH") return 1.0;
     if (currency == "USD") return 41.5;
@@ -14,7 +16,7 @@ double getRate(const std::string &currency)
     throw invalid_argument("невідома валюта: " + currency);
 }
 
-double convert(double amount, const std::string &from, const std::string &to)
+double convert(double amount, const string &from, const string &to)
 {
     double rateFrom = getRate(from);
     double rateTo = getRate(to);

@@ -13,7 +13,7 @@ using namespace std;
 // Зчитує суму, доки користувач не введе додатне число.
 static double readAmount()
 {
-    string line();
+    string line;
     while (true){
         cout << "Введіть суму:";
         cin >> line;
