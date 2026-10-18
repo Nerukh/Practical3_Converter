@@ -1,15 +1,21 @@
+/**
+ * @file output.cpp
+ * @brief Реалізація модуля виведення.
+ */
 #include "output.h"
 #include <iostream>
 #include <iomanip>
 
-void printResult(double amount, const std::string &from,
-                 double result, const std::string &to)
+using namespace std;
+
+void printResult(double amount, const string &from,
+                 double result, const string &to)
 {
     if (result < 0)
     {
-        std::cout << "Помилка: невідома валюта!\n";
+        cout << "Помилка: невідома валюта!\n";
         return;
     }
-    std::cout << std::fixed << std::setprecision(2);
-    std::cout << amount << " " << from << " = " << result << " " << to << "\n";
+    cout << fixed << setprecision(2);
+    cout << amount << " " << from << " = " << result << " " << to << "\n";
 }
